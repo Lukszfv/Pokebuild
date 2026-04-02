@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PokéBuild</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style/pokemon.css">
+  <link rel="shortcut icon" href="../imagens/ultra-ball.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="sidebar">
+    <a href="../index.html" class="nav-item">
+      <img src="../imagens/home.png"><span>Home</span>
+    </a>
+    <a href="search.html" class="nav-item">
+      <img src="../imagens/search.png"><span>Search</span>
+    </a>
+    <a href="pokemon.html" class="nav-item active">
+      <img src="../imagens/pokemon.png"><span>Pokemon</span>
+    </a>
+    <a href="build.html" class="nav-item">
+      <img src="../imagens/build.png"><span>Build</span>
+    </a>
+    <a href="moves.html" class="nav-item">
+      <img src="../imagens/moves.png"><span>Moves</span>
+    </a>
+    <a href="items.html" class="nav-item">
+      <img src="../imagens/item.png"><span>Items</span>
+    </a>
+  </div>
+
+  <div id="page-content">
+
+    <div id="topbar">
+      <h1 id="poke-name">—</h1>
+      <div class="toggle" id="toggle">
+        <div class="slider"></div>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="loading">Carregando…</div>
+
+      <div class="card" id="card-base" style="display:none">
+        <h2>Base</h2>
+        <div id="base-inner">
+
+          <div id="left-col">
+            <div id="sprite-box">
+              <span style="color:#555;font-size:13px">Imagem</span>
+            </div>
+
+            <div id="type-row" style="margin-bottom:10px"></div>
+
+            <label class="field-label">Ability</label>
+            <select class="field-select" id="sel-ability"></select>
+            <div id="ability-desc" class="loading">Carregando descrição…</div>
+
+            <label class="field-label">Nature</label>
+            <select class="field-select" id="sel-nature"></select>
+
+            <div id="ivs-box">
+              <div class="iv-title">IVs</div>
+              <div class="iv-row">HP: 31</div>
+              <div class="iv-row">Atk: 31</div>
+              <div class="iv-row">Def: 31</div>
+              <div class="iv-row">SpA: 31</div>
+              <div class="iv-row">SpD: 31</div>
+              <div class="iv-row">Spe: 31</div>
+            </div>
+          </div>
+
+          <div id="stats-col"></div>
+        </div>
+      </div>
+
+      <div class="card" id="card-builder" style="display:none">
+        <h2>Builder</h2>
+        <div id="builder-inner">
+          <div id="moves-col">
+            <div id="move-slots"></div>
+            <label class="field-label" style="margin-top:8px">Item</label>
+            <div id="item-wrapper" style="position: relative; display: flex; align-items: center; width: 100%;">
+
+              <div id="item-icon-box" style="
+                    position: absolute; 
+                    left: 8px; 
+                    z-index: 10; 
+                    pointer-events: none; 
+                    display: flex; 
+                    align-items: center; 
+                    justify-content: center;
+                    width: 24px;
+                    height: 24px;
+                  "></div>
+
+              <select class="field-select" id="sel-item" style="padding-left: 38px;"></select>
+            </div>
+          </div>
+          <div id="evs-col"></div>
+        </div>
+      </div>
+      <div id="moves-col">
+        <div id="move-slots"></div>
+
+        <button onclick="exportParaOBuild()" id="save-build-btn" style="
+      margin-top: 16px;
+      margin-left: 430px;
+      width: 50%;
+      padding: 12px;
+      background: #c62828;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s;
+    " onmouseover="this.style.background='#a52020'" onmouseout="this.style.background='#c62828'">
+          💾 Salvar / Exportar Build
+        </button>
+        </a>
+      </div>
+
+      <div class="card" id="card-set" style="display:none">
+        <h2 class="upper">Estratégia Mais Usada</h2>
+        <div class="set-box">
+          <div class="set-title" id="set-name"></div>
+          <div class="set-cols">
+            <div id="set-moves"></div>
+            <div id="set-details"></div>
+          </div>
+        </div>
+        <button class="btn-apply" id="btn-apply">Aplicar Este Set</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="../scripts/pokemon.js"></script>
+</body>
+
+</html>

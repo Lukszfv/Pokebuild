@@ -1,0 +1,242 @@
+:root {
+    --vermelho: #c62828;
+    --amarelo: #ffd000;
+
+    /* DARK MODE */
+    --bg: #0f0f0f;
+    --bar-bg: #333;
+    --card-2: #2a2a2a;
+    --card-3: #121212;
+    --text: #eaeaea;
+    --border: #333;
+    --slider: #ffffff;
+}
+
+/* LIGHT MODE */
+body.light {
+    --bg: #e2e8f0; 
+    --bar-bg: #cbd5e1;
+    --card: #f1f5f9; 
+    --card-2: #e2e8f0;
+    --card-3: #f8fafc;
+    --text: #1e293b; 
+    --border: #94a3b8;
+    --input-bg: #f8fafc;
+    --slider: #334155;
+    --input-border: #cbd5e1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.sidebar {
+    width: 95px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: linear-gradient(180deg, #8b0000, var(--vermelho));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 100;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    margin: 15px 0;
+    font-size: 13px;
+    gap: 5px;
+    transition: 0.2s;
+}
+
+.nav-item img {
+    width: 36px;
+    height: 36px;
+}
+
+.nav-item.active {
+    color: var(--amarelo);
+}
+
+.toggle {
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    background: var(--vermelho);
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.slider {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--slider);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+}
+
+body.light .slider {
+    left: 32px;
+}
+
+.main {
+    margin-left: 130px;
+    flex: 1;
+    padding: 30px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-select:hover {
+  background: var(--card-2);
+}
+
+.filter-select:focus {
+  border: 1px solid var(--vermelho);
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2);
+}
+
+.main-search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  outline: none;
+  transition: 0.2s;
+}
+
+.main-search-input:focus {
+  border: 1px solid var(--vermelho);
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2);
+}
+
+.move-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    background: var(--card-2);
+    border-radius: 12px;
+    transition: transform 0.2s, background 0.2s;
+    border-left: 6px solid #444; 
+}
+
+.move-row:hover {
+    transform: translateX(5px);
+    background: var(--card-3);
+}
+
+.move-type-icon {
+    min-width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.move-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.move-name-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.move-name-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    text-transform: capitalize;
+}
+
+.move-stats-badge {
+    font-size: 11px;
+    color: #888;
+    background: rgba(255,255,255,0.05);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.move-description-text {
+    font-size: 14px;
+    color: #bbb;
+    line-height: 1.4;
+}
+
+.cat-badge {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+.cat-physical { background: #cc4444; }
+.cat-special { background: #5a5274; }
+.cat-status { background: #8a8878; }
+
+.loading {
+    padding: 20px;
+    color: #888;
+    font-style: italic;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeBuild - Moves</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/moves.css">
+    <link rel="shortcut icon" href="../imagens/ultra-ball.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <a href="../index.html" class="nav-item">
+            <img src="../imagens/home.png"><span>Home</span>
+        </a>
+        <a href="search.html" class="nav-item">
+            <img src="../imagens/search.png"><span>Search</span>
+        </a>
+        <a href="pokemon.html" class="nav-item">
+            <img src="../imagens/pokemon.png"><span>Pokemon</span>
+        </a>
+        <a href="build.html" class="nav-item">
+            <img src="../imagens/build.png"><span>Build</span>
+        </a>
+        <a href="moves.html" class="nav-item active">
+            <img src="../imagens/moves.png"><span>Moves</span>
+        </a>
+        <a href="items.html" class="nav-item">
+            <img src="../imagens/item.png"><span>Items</span>
+        </a>
+    </div>
+
+    <div class="main">
+        <div class="title">Moves</div>
+
+        <div class="filters search-center">
+            <div class="search-box-wrapper">
+                <input type="text" id="search-input" placeholder="Buscar movimento..." class="main-search-input">
+            </div>
+            <select id="type-filter" class="filter-select">
+                <option value="">Todos os tipos</option>
+                <option value="fire">Fire</option>
+                <option value="water">Water</option>
+                <option value="grass">Grass</option>
+                <option value="electric">Electric</option>
+                <option value="ice">Ice</option>
+                <option value="fighting">Fighting</option>
+                <option value="poison">Poison</option>
+                <option value="ground">Ground</option>
+                <option value="flying">Flying</option>
+                <option value="psychic">Psychic</option>
+                <option value="bug">Bug</option>
+                <option value="rock">Rock</option>
+                <option value="ghost">Ghost</option>
+                <option value="dragon">Dragon</option>
+                <option value="dark">Dark</option>
+                <option value="steel">Steel</option>
+                <option value="fairy">Fairy</option>
+            </select>
+
+            <select id="category-filter" class="filter-select">
+                <option value="">Todas categorias</option>
+                <option value="physical">Physical</option>
+                <option value="special">Special</option>
+                <option value="status">Status</option>
+            </select>
+
+        </div>
+
+        <div id="moves-list-container">
+            <div style="padding: 20px; color: #888;">Carregando movimentos...</div>
+        </div>
+    </div>
+
+    <div class="toggle" id="toggle">
+        <div class="slider"></div>
+    </div>
+
+    <script type="module" src="../scripts/movesList.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PokeBuild</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/style.css">
+<link rel="shortcut icon" href="imagens/ultra-ball.png" type="image/x-icon">
+
+</head>
+<body>
+
+<div class="sidebar">
+<a href="index.html" class="nav-item active">
+    <img src="imagens/home.png" alt="">
+    <span>Home</span>
+</a>
+<a href="pages/search.html" class="nav-item">
+    <img src="imagens/search.png" alt="">
+    <span>Search</span>
+</a>
+<a href="pages/pokemon.html" class="nav-item">
+    <img src="imagens/pokemon.png" alt="">
+    <span>Pokemon</span>
+</a>
+<a href="pages/build.html" class="nav-item">
+    <img src="imagens/build.png" alt="">
+    <span>Build</span>
+</a>
+<a href="pages/moves.html" class="nav-item">
+    <img src="imagens/moves.png" alt="">
+    <span>Moves</span>
+</a>
+<a href="pages/items.html" class="nav-item">
+    <img src="imagens/item.png" alt="">
+    <span>Items</span>
+</a>
+</div>
+
+<div class="main">
+<div class="title">PokeBuild</div>
+
+<div class="section card hero-section">
+  <h2>Bem-vindo ao PokeBuild</h2>
+  <p style="font-size: 18px; opacity: 0.9; max-width: 600px; margin: 0 auto;">Crie os melhores times Pokémon para competições e batalhas épicas!</p>
+  <div class="hero-buttons">
+   <a href="pages/search.html" class="btn">
+  <img src="imagens/search.png" class="btn-icon">
+  Buscar Pokémon
+</a>
+
+<a href="pages/build.html" class="btn">
+  <img src="imagens/build.png" class="btn-icon">
+  Criar Build
+</a>
+  </div>
+  <div class="pokemon-img" style="width:200px; height:200px; margin: 0 auto; font-size: 64px; font-weight: 700;"><img src="imagens/ultra-ball.png" alt="" class="pokemon-img"></div>
+</div>
+
+<div class="section card">
+  <h2>Pokémon Populares</h2>
+  <div class="pokemon-grid" id="popular-grid">
+  </div>
+</div>
+
+<div class="section card">
+  <h2>Links Rápidos</h2>
+  <div class="quick-links">
+    <a href="pages/search.html" class="quick-card">
+      <img src="imagens/search.png" alt="Search">
+      <h3>Search</h3>
+      <p>Encontre qualquer Pokémon</p>
+    </a>
+    <a href="pages/pokemon.html" class="quick-card">
+      <img src="imagens/pokemon.png" alt="Pokemon">
+      <h3>Pokémon</h3>
+      <p>Lista completa</p>
+    </a>
+    <a href="pages/moves.html" class="quick-card">
+      <img src="imagens/moves.png" alt="Moves">
+      <h3>Moves</h3>
+      <p>Todos os ataques</p>
+    </a>
+    <a href="pages/items.html" class="quick-card">
+      <img src="imagens/item.png" alt="Items">
+      <h3>Items</h3>
+      <p>Objetos úteis</p>
+    </a>
+  </div>
+</div>
+
+<div class="toggle" id="toggle">
+    <div class="slider"></div>
+</div>
+
+<script src="scripts/script.js"></script>
+
+</body>
+</html>

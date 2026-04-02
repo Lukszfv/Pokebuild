@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeBuild - Search</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="shortcut icon" href="../imagens/ultra-ball.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <a href="../index.html" class="nav-item">
+            <img src="../imagens/home.png"><span>Home</span>
+        </a>
+        <a href="search.html" class="nav-item active">
+            <img src="../imagens/search.png"><span>Search</span>
+        </a>
+        <a href="pokemon.html" class="nav-item">
+            <img src="../imagens/pokemon.png"><span>Pokemon</span>
+        </a>
+        <a href="build.html" class="nav-item">
+            <img src="../imagens/build.png"><span>Build</span>
+        </a>
+        <a href="moves.html" class="nav-item">
+            <img src="../imagens/moves.png"><span>Moves</span>
+        </a>
+        <a href="items.html" class="nav-item">
+            <img src="../imagens/item.png"><span>Items</span>
+        </a>
+    </div>
+
+    <div class="main">
+
+        <div class="title">Search Pokémon</div>
+
+        <div class="search-center">
+            <div class="search-box-wrapper">
+                <input type="text" id="pokemonSearch" placeholder="Search Pokémon..." class="main-search-input"
+                    autocomplete="off">
+                <div class="suggestions" id="suggestions"></div>
+            </div>
+        </div>
+
+        <!-- filtro
+            <select id="typeFilter">
+            <option value="">All</option>
+            <option value="water">Water</option>
+            <option value="fire">Fire</option>
+            </select>
+            -->
+
+        <div class="search-layout">
+
+            <div class="results-section">
+                <div class="section-title">Search Results:</div>
+                <div class="results-grid" id="resultsGrid"></div>
+            </div>
+            <div class="side-section">
+                <div class="section-title">Last Searches:</div>
+                <div id="lastSearches" class="last-searches">
+                    <span style="opacity:.6;">No searches yet</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="toggle" id="toggle">
+            <div class="slider"></div>
+        </div>
+
+        <script src="../scripts/search.js"></script>
+
+</body>
+
+</html>
