@@ -175,7 +175,7 @@ if (team.pokemons.length < 6) {
         window.location.href = "search.html";
     };
 
-    await renderTeamCoverage(team);
+    
     container.appendChild(addBtn);
 }
 }

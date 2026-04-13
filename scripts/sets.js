@@ -20,18 +20,27 @@ export const POPULAR_SETS = {
 
   dragapult: {
     name: "Special Sweeper",
-    moves: ["Shadow Ball", "Flamethrower", "Thunderbolt", "U-turn"],
-    item: "Choice Specs",
-    ability: "Infiltrator",
-    nature: "Timid",
-    evs: { hp: 0, atk: 0, def: 0, spa: 252, spd: 4, spe: 252 }
+    moves: ["Dragon Darts", "Phantom Force", "Tera Blast", "U-turn"],
+    item: "Choice Scarf",
+    ability: "Clear Body",
+    nature: "Adamant",
+    evs: { hp: 0, atk: 252, def: 0, spa: 0, spd: 4, spe: 252 }
   },
 
   charizard: {
     name: "Special Attacker",
-    moves: ["Flamethrower", "Hurricane", "Scorching Sands", "Will-O-Wisp"],
+    moves: ["Flamethrower", "Scorching Sands", "Hurricane", "Will-O-Wisp"],
     item: "Heavy-Duty Boots",
     ability: "Blaze",
+    nature: "Timid",
+    evs: { hp: 0, atk: 0, def: 0, spa: 252, spd: 4, spe: 252 }
+  },
+
+  "charizard-mega-y": {
+    name: "Special Attacker",
+    moves: ["Heat-wave", "Overheat", "Solar Beam", "Protect"],
+    item: "Charizardite-y",
+    ability: "Drought",
     nature: "Timid",
     evs: { hp: 0, atk: 0, def: 0, spa: 252, spd: 4, spe: 252 }
   },
@@ -57,11 +66,39 @@ export const POPULAR_SETS = {
   tyranitar: {
     name: "Sand Sweeper",
     moves: ["Stone Edge", "Crunch", "Earthquake", "Dragon Dance"],
-    item: "Weakness Policy",
+    item: "Tyranitarite",
     ability: "Sand Stream",
     nature: "Adamant",
     evs: { hp: 4, atk: 252, def: 0, spa: 0, spd: 0, spe: 252 }
   },
+
+  mewtwo: {
+    name: "Special Attacker",
+    moves: ["Psystrike", "Ice Beam", "Fire Blast", "Calm mind"],
+    item: "mewtwonite y",
+    ability: "Unnerve",
+    nature: "Timid",
+    evs: { hp: 0, atk: 0, def: 40, spa: 216, spd: 0, spe: 252 }
+  },
+
+  eevee: {
+    name: "Special Attacker",
+    moves: ["Quick Attack", "Baton Pass", "Last Resort", "Protect"],
+    item: "Eevium Z",
+    ability: "Anticipation",
+    nature: "Timid",
+    evs: { hp: 0, atk: 252, def: 4, spa: 0, spd: 0, spe: 252 }
+  },
+
+  sylveon: {
+    name: "Cleric",
+    moves: ["Hyper Voice", "Wish", "Heal Bell", "Protect"],
+    item: "Leftovers",
+    ability: "Pixilate",
+    nature: "Bold",
+    evs: { hp: 252, atk: 0, def: 252, spa: 4, spd: 0, spe: 0 }
+  },
+
 
   excadrill: {
     name: "Sand Rush",
@@ -77,7 +114,7 @@ export const POPULAR_SETS = {
     teraType: "Normal",
     moves: ["Close Combat", "Extreme Speed", "Swords Dance", "Meteor Mash"],
     item: "Life Orb",
-    ability: "Inner Focus",
+    ability: "Justified",
     nature: "Jolly",
     evs: { hp: 0, atk: 252, def: 0, spa: 0, spd: 4, spe: 252 }
   },
