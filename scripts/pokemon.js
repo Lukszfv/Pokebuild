@@ -265,10 +265,10 @@ function handleMoveInput(index, value, suggestionsBox) {
     const item = document.createElement("div");
     item.className = "suggestion";
     item.textContent = m;
-    item.addEventListener("mousedown", () => {    
+    item.addEventListener("mousedown", () => {
       state.moves[index] = m;
       suggestionsBox.innerHTML = "";
-      renderMoveSlots();                    
+      renderMoveSlots();
     });
     suggestionsBox.appendChild(item);
   });
@@ -482,7 +482,7 @@ async function init() {
         .map(([k, v]) => `${v} ${k.toUpperCase()}`)
         .join(" / ")
       }</div>`;
-      
+
 
     document.getElementById("btn-apply").onclick = async () => {
       state.moves = [...popular.moves];
@@ -490,6 +490,7 @@ async function init() {
       state.nature = popular.nature;
       state.evs = { ...popular.evs };
       state.teraType = popular.teraType || "Stellar";
+      state.ability = popular.ability;
 
       document.getElementById("sel-nature").value = popular.nature;
       document.getElementById("sel-item").value = popular.item;
@@ -498,6 +499,11 @@ async function init() {
       if (selTera) {
         selTera.value = state.teraType;
         selTera.style.borderLeft = `10px solid ${TYPE_COLORS[state.teraType] || '#ccc'}`;
+      }
+
+      const selAbility = document.getElementById("sel-ability");
+      if (selAbility) {
+        selAbility.value = popular.ability;
       }
 
       await renderMoveSlots();
