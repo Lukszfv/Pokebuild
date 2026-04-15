@@ -197,12 +197,13 @@ body {
 #base-inner {
   display: flex;
   gap: 40px;
-  flex-wrap: wrap;
   align-items: flex-start;
+  flex-wrap: nowrap;
 }
 
 #left-col {
-  min-width: 190px;
+  width: 220px;
+  flex-shrink: 0;
 }
 
 #sprite-box {
@@ -268,6 +269,8 @@ select.field-select option {
   color: #bbb;
   line-height: 1.6;
   min-height: 44px;
+  max-width: 220px;
+  word-wrap: break-word;
 }
 
 #ability-desc.loading {
@@ -296,8 +299,8 @@ select.field-select option {
 }
 
 #stats-col {
-  flex: 1;
-  max-width: 800px;
+  width: 550px;
+  flex-shrink: 0;
 }
 
 .stat-row {
